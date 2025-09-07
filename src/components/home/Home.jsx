@@ -14,7 +14,7 @@ const ArrowRightIcon = () => (
     strokeWidth="2.5"
     strokeLinecap="round"
     strokeLinejoin="round"
-    style={{ marginLeft: '8px', verticalAlign: 'middle' }}
+    style={{ marginLeft: "8px", verticalAlign: "middle" }}
   >
     <line x1="5" y1="12" x2="19" y2="12"></line>
     <polyline points="12 5 19 12 12 19"></polyline>
@@ -34,12 +34,13 @@ function Home() {
             Innovation Unleashed
           </h1>
           <p className={styles.heroSubtitle}>
-            Welcome to the annual showcase of talent from the
-            Department of Information Science & Engineering at MIT Mysore.
+            Welcome to the annual showcase of talent from the Department of
+            Information Science & Engineering at MIT Mysore.
           </p>
           <p className={styles.heroDescription}>
-            Explore groundbreaking student projects, discover emerging technologies,
-            and celebrate the spirit of innovation that defines our department.
+            Explore groundbreaking student projects, discover emerging
+            technologies, and celebrate the spirit of innovation that defines
+            our department.
           </p>
           <button
             className={styles.heroCtaButton}
@@ -58,18 +59,6 @@ function Home() {
           {/* You could add an illustrative graphic here too or instead of the logo */}
         </div>
       </section>
-
-      {/* Future Sections Can Go Here (e.g., Quick Links, About Expo Summary) */}
-      {/*
-      <section className={styles.quickInfoSection}>
-        <h2>Discover More</h2>
-        <div className={styles.quickInfoCards}>
-          // Card for Announcements
-          // Card for Guidelines
-          // Card for Prizes
-        </div>
-      </section>
-      */}
     </div>
   );
 }

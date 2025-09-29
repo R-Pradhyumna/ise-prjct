@@ -1,151 +1,164 @@
-/* src/pages/Footer.css */
+/* Flexbox Layout for Sticky Footer */
+body,
+.main-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
 
 .footer {
-  background-color: #003b8e; /* Slightly darker shade of the blue for depth, or use #004aad */
-  color: #e0e0e0; /* Light gray for text, white can be too stark */
-  font-size: 0.9rem; /* Base font size for footer */
-  padding-top: 40px; /* Space above content wrapper */
-  /* padding-bottom will be handled by footer-bottom */
-  text-align: left; /* Default to left align for sections */
-  box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.15); /* Softer, more modern top shadow */
-  margin-top: 48px; /* (6 * 8px) space above footer */
+  background-color: #003b8e;
+  color: #e0e0e0;
+  font-size: 0.9rem;
+  padding-top: 40px;
+  text-align: left;
+  box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.15);
+  margin-top: auto;
   line-height: 1.6;
 }
 
+/* Wrapper for Footer Sections */
 .footer-content-wrapper {
-  max-width: 1280px; /* Consistent with AppLayout and Header */
-  margin: 0 auto; /* Center the content */
-  padding: 0 24px 32px; /* Horizontal (3*8px), Bottom (4*8px) */
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px 32px;
   display: flex;
-  flex-direction: column; /* Mobile: Stack sections */
-  gap: 32px; /* Space between sections when stacked */
+  flex-direction: column;
+  gap: 32px;
 }
 
+/* Footer Section */
 .footer-section {
-  /* Styles for individual sections if needed */
+  flex: 1;
+  min-width: 200px;
 }
 
+/* Footer Logo Image */
+.footer-logo {
+  max-width: 160px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  margin-bottom: 16px;
+}
+
+/* Footer Heading */
 .footer-heading {
   font-size: 1.1rem;
   font-weight: 600;
-  color: #ffffff; /* White for headings for better contrast */
-  margin-bottom: 16px; /* (2 * 8px) */
+  color: #ffffff;
+  margin-bottom: 16px;
   position: relative;
-  padding-bottom: 8px; /* Space for underline */
+  padding-bottom: 8px;
 }
 
-/* Optional: Subtle underline for headings */
 .footer-heading::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 40px; /* Short underline */
+  width: 40px;
   height: 2px;
-  background-color: #ffcc00; /* Accent color */
+  background-color: #ffcc00;
 }
 
-.university-affiliation {
-  font-size: 0.85rem;
-  color: #b0b0b0; /* Subtler color */
-  margin-bottom: 12px;
-}
-
-.footer-logo {
-  max-height: 40px;
-  margin-right: 12px;
-  margin-bottom: 12px;
-  display: inline-block; /* Make them sit side-by-side if space allows */
-  vertical-align: middle;
-  opacity: 0.9;
-  transition: opacity 0.3s ease;
-}
-.footer-logo:hover {
-  opacity: 1;
-}
-
-.hod-name {
-  font-weight: 500;
-  color: #f5f5f5; /* Slightly brighter than base text */
-  margin-bottom: 2px;
-}
-
-.hod-title {
-  font-size: 0.85rem;
-  color: #c0c0c0;
-  margin-bottom: 12px;
-}
-
-.contact-links {
-  display: flex;
-  flex-direction: column;
-  gap: 8px; /* Space between contact links */
-}
-
-.footer-link {
-  color: #ffdd40; /* Brighter yellow for links, original #ffcc00 is good too */
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.2s ease-in-out, text-decoration 0.2s ease-in-out;
-  display: inline-block; /* To allow for better hover effect if needed */
-}
-
-.footer-link:hover,
-.footer-link:focus {
-  color: #fffacd; /* Lighter yellow for hover */
-  text-decoration: underline;
-}
-
-
-/* Footer Bottom (Copyright) */
+/* Footer Bottom Bar */
 .footer-bottom {
-  background-color: rgba(0, 0, 0, 0.2); /* Slightly darker band for copyright */
+  background-color: rgba(0, 0, 0, 0.2);
   text-align: center;
-  padding: 16px 24px; /* (2*8px) top/bottom, (3*8px) L/R */
+  padding: 16px 24px;
   font-size: 0.8rem;
-  color: #a0a0a0; /* Muted color for copyright */
+  color: #a0a0a0;
 }
 
 .footer-bottom p {
   margin: 0;
 }
 
-/* Responsive Adjustments for Tablets and Desktops */
-@media (min-width: 600px) { /* Tablet breakpoint */
+/* Contact Links */
+.contact-links {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+
+.footer-link {
+  color: #ffdd40;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease, text-decoration 0.2s ease;
+}
+
+.footer-link:hover,
+.footer-link:focus {
+  color: #fffacd;
+  text-decoration: underline;
+}
+
+/* Contact Card */
+.contact-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Profile Image (used in contact cards) */
+.footer-profile-img {
+  max-width: 160px;
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+  margin-bottom: 12px;
+}
+
+/* Responsive Adjustments */
+@media (min-width: 600px) {
   .footer-content-wrapper {
-    flex-direction: row; /* Arrange sections side-by-side */
+    flex-direction: row;
     justify-content: space-between;
-    align-items: flex-start; /* Align items to the top of their container */
-    gap: 40px; /* Space between columns */
-    padding: 0 32px 40px; /* Update padding */
+    align-items: flex-start;
+    gap: 40px;
+    padding: 0 32px 40px;
   }
 
-  .footer-section {
-    flex: 1; /* Allow sections to grow and share space */
-    min-width: 200px; /* Minimum width for a section before wrapping (if flex-wrap: wrap is used) */
-  }
-
-  .footer-section.about-department {
-    flex-basis: 40%; /* Example: give one section more space if needed */
-  }
-  .footer-section.contact-info {
-    flex-basis: 30%;
-  }
-
-  /* Add .footer-logo styling for larger screens if needed */
   .footer-logo {
     max-height: 45px;
   }
 }
 
 @media (min-width: 1024px) {
-   .footer-content-wrapper {
+  .footer-content-wrapper {
     padding: 0 40px 48px;
   }
+
   .footer {
-    font-size: 0.95rem; /* Slightly larger base font for desktop */
+    font-size: 0.95rem;
   }
+
   .footer-heading {
     font-size: 1.15rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+/* Footer Logo Section: Arrange logos side-by-side on desktop */
+.footer-logo-section {
+  display: flex;
+  flex-direction: column; /* Vertical on mobile */
+  align-items: center;
+  gap: 16px;
+}
+
+@media (min-width: 600px) {
+  .footer-logo-section {
+    flex-direction: row; /* Horizontal on desktop */
+    justify-content: flex-start;
   }
 }

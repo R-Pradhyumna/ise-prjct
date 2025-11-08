@@ -3,6 +3,7 @@ import { createRoot } from "react-dom/client";
 import App from "./App.jsx";
 import { ErrorBoundary } from "react-error-boundary";
 import Spinner from "./pages/Spinner.jsx";
+import "./fonts.css";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>

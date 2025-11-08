@@ -1,8 +1,8 @@
 // src/pages/AppLayout.jsx
 import { Outlet } from "react-router-dom";
-import Header from "./Header"; // Corrected: Local import
-import Footer from "./Footer"; // Corrected: Local import
 import styles from "./AppLayout.module.css";
+import Footer from "./Footer"; // Corrected: Local import
+import Header from "./Header"; // Corrected: Local import
 
 const AppLayout = () => {
   return (

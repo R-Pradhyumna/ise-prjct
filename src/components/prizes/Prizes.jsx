@@ -1,15 +1,15 @@
-import { useState, useEffect, useMemo, memo } from "react";
 import { useQuery } from "@tanstack/react-query";
 import Papa from "papaparse";
-import styles from "./Prizes.module.css";
+import { memo, useEffect, useMemo, useState } from "react";
 import {
-  FaTrophy,
-  FaSpinner,
-  FaExternalLinkAlt,
-  FaUsers,
-  FaProjectDiagram,
   FaCalendarAlt,
+  FaExternalLinkAlt,
+  FaProjectDiagram,
+  FaSpinner,
+  FaTrophy,
+  FaUsers,
 } from "react-icons/fa";
+import styles from "./Prizes.module.css";
 
 const sheetUrl = import.meta.env.VITE_SHEET_URL;
 

@@ -1,13 +1,13 @@
-import { useMemo, memo } from "react";
 import { useQuery } from "@tanstack/react-query";
 import Papa from "papaparse";
-import styles from "./Announcements.module.css";
+import { memo, useMemo } from "react";
 import {
   FaBullhorn,
-  FaSpinner,
   FaExternalLinkAlt,
   FaFilePdf,
+  FaSpinner,
 } from "react-icons/fa";
+import styles from "./Announcements.module.css";
 
 const sheetUrl = import.meta.env.VITE_SHEET_URL;
 const ANNOUNCEMENT_LINK_COLUMN = "Innovata Announcements";

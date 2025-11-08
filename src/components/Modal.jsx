@@ -1,7 +1,6 @@
 // src/components/Modal.jsx
-import React from "react";
-import styles from "./Modal.module.css";
 import { FaTimes } from "react-icons/fa";
+import styles from "./Modal.module.css";
 
 const Modal = ({ isOpen, onClose, title, children }) => {
   if (!isOpen) return null;

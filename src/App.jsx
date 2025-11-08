@@ -1,9 +1,9 @@
-import { lazy, Suspense } from "react";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
+import { lazy, Suspense } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Spinner from "./pages/Spinner";
 import "./App.css";
+import Spinner from "./pages/Spinner";
 
 const AppLayout = lazy(() => import("./pages/AppLayout"));
 const Home = lazy(() => import("./components/home/Home"));
